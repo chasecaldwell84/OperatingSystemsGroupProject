@@ -3,7 +3,7 @@ services:
     build: .
     image: os-workbench
     volumes:
-      - .:/workspace        # edit on your host, build/run in the container
+      - ..:/workspace       # edit on your host, build/run in the container
     stdin_open: true
     tty: true
     shm_size: "1gb"         # MPI shared-memory transport needs room
