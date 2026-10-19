@@ -30,3 +30,11 @@ Strategy	Required Meaning
 STATIC	Divide the iteration range into predetermined contiguous blocks, with at most one block per worker.
 CYCLIC	Assign iterations or fixed-size chunks in round-robin order to workers.
 DYNAMIC	Assign the next available fixed-size chunk at run time. std::thread and OpenMP use a synchronized counter or runtime schedule; MPI uses a manager-worker message protocol.
+
+Monte Carlo Pi Validation
+The Monte Carlo estimate is approximate, but the same seed and sample count must generate the same points across all four models.
+The validation must check that:
+Each version completes the requested number of trials.
+Each version derives the same point samples from the base seed and trial index without shared mutable random state.
+The estimate agrees with the sequential result when the same samples are used; also discuss expected sampling error.
+Repeated runs with the same seed and configuration are reproducible according to the documented random-stream method.

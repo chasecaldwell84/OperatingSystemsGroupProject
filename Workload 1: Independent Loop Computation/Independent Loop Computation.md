@@ -26,3 +26,7 @@ Strategy	Required Meaning
 STATIC	Divide the iteration range into predetermined contiguous blocks, with at most one block per worker.
 CYCLIC	Assign iterations or fixed-size chunks in round-robin order to workers.
 DYNAMIC	Assign the next available fixed-size chunk at run time. std::thread and OpenMP use a synchronized counter or runtime schedule; MPI uses a manager-worker message protocol.
+
+Loop Workload Validation
+The loop workload must produce a checksum of the output array.
+The checksum must be independent of thread count and scheduling method.
