@@ -14,6 +14,8 @@
 
 ## 1. Proposed Class or Module Design
 
+![Module Design](images/moduledesign.png)
+
 ## 2. Proposed Workload Representation
 
 ### Workload 1: LOOP (independent loop)

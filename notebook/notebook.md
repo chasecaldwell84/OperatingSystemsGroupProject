@@ -47,3 +47,20 @@ We met and split up the work for the team along with making github.
 | Workload 2: Dot Product (DOT) | Chase and Owen |
 | Workload 3: Monte Carlo Pi (PI) | Dakota |
 
+
+**Milestone 1 Module design diagram
+
+Date 10/21/2026
+Author Dakota Hernandez
+Milestone 1: Design Proposal
+| Type | Diagram |
+
+**What happened
+Added the proposed class/module design diagram to the Milestone 1 design proposal.
+
+**Details** 
+
+- Diagram of the module design  section of Milestone 1
+
+![module design](../Milestone%201:%20Design%20Proposal%09/images/moduledesign.png)
+
