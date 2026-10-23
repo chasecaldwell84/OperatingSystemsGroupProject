@@ -123,7 +123,12 @@ A way of determining how much a program can be improved by introducing
  as the entire program cannot be threaded there will always be parts of the code 
  that stay sequential and arent improved by multithreading.
 
-![Amdahl](/images/Amdahl_formula.png)
+$S = \frac{1}{P + \frac{(1 - P)}{N}}$
+
+S = speed up
+P = part of the task that can be parallelized
+N = number of proccessors
+
 
 
 ## 7. Planned Division of Responsibilities
