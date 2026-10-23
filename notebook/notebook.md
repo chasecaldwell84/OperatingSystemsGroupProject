@@ -64,3 +64,36 @@ Added the proposed class/module design diagram to the Milestone 1 design proposa
 
 ![module design](../Milestone%201:%20Design%20Proposal%09/images/moduledesign.png)
 
+**Milestone 1 design proposal completed
+
+Date 10/22/2026
+Author Dakota Hernandez
+Milestone 1: Design Proposal
+| Type | Design decision / Milestone notes |
+
+**What happened or what we did**
+Filled in the my Milestone 1 sections: 
+
+**Details** 
+
+**Result or outcome**
+Milestone 1 document is ready for the team to finish before submission.
+
+
+**Milestone 1 Module design diagram update
+
+Date 10/22/2026
+Author Dakota Hernandez
+Milestone 1: Design Proposal
+| Type | Diagram |
+
+**What happened
+Added the proposed class/module design diagram to the Milestone 1 design proposal, 
+after realizes the previous method of main handling timing was flawed due to 
+setup of processes varying
+
+**Details** 
+
+- Diagram of the module design  section of Milestone 1
+
+![updated module design](../Milestone%201:%20Design%20Proposal%09/images/updatedmoduledesign.png)
