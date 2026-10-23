@@ -104,20 +104,28 @@ The report prints `VALID: YES` or `VALID: NO`. Bad input prints `STATUS: INVALID
 - **Race conditions.** 
 
 - **Mutexes and critical sections.** 
+A critical section is code that touches shared data and should run in only one thread per time. A mutex is a lock that enforces this. A thread locks the mutex before entering the critical section and unlocks it when done.
 
 - **Reduction.** 
 
 - **Atomic operations.**
+An operation that happens as one indivisible step, so no other thread can see it half finished.
+An example would be incrementing a shared counter atomically as doing it non atomic will
+make a lot of increments not count.
 
 - **MPI ranks, communicators, and messages.** 
 
 - **OS thread scheduling.**
+The operating system decides which threads run on which CPU cores and for how long,
+switching between them as needed based on a set of rules.
 
 - **Load balancing.**
+Spreading work evenly across threads or processes so none sit idle while others are still busy.
 
 - **Memory bandwidth and false sharing.** 
 
 - **Timing variability.**
+Run times change from run to run because of scheduling, other programs running, and caching.
 
 - **Amdahl's Law.** 
 A way of determining how much a program can be improved by introducing
