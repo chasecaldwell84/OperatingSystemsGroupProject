@@ -82,7 +82,7 @@ Milestone 1 document is ready for the team to finish before submission.
 
 **Milestone 1 Module design diagram update
 
-Date 10/22/2026
+Date 10/23/2026
 Author Dakota Hernandez
 Milestone 1: Design Proposal
 | Type | Diagram |
