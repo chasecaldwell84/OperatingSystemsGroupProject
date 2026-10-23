@@ -55,7 +55,8 @@ struct RunResult {
 
 
 ### Workload 1: LOOP (independent loop)
-
+- Each element 'i' will be calculated such that no two elements are the same
+- Elements will be calculated independently
 
 ### Workload 2: DOT (dot product)
 
