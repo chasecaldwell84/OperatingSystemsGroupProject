@@ -92,19 +92,39 @@ The report prints `VALID: YES` or `VALID: NO`. Bad input prints `STATUS: INVALID
 ## 6. Initial Explanation of Relevant Operating-System Concepts
 
 - **Processes vs. threads.** 
+
 - **Shared address space.** 
+
 - **Shared vs. private data.** 
+
 - **Thread creation and joining.** 
+
 - **Race conditions.** 
+
 - **Mutexes and critical sections.** 
+
 - **Reduction.** 
+
 - **Atomic operations.**
+
 - **MPI ranks, communicators, and messages.** 
+
 - **OS thread scheduling.**
+
 - **Load balancing.**
+
 - **Memory bandwidth and false sharing.** 
+
 - **Timing variability.**
+
 - **Amdahl's Law.** 
+A way of determining how much a program can be improved by introducing
+ multithreading. A program can not simply increase its speed by doubling the threads
+ as the entire program cannot be threaded there will always be parts of the code 
+ that stay sequential and arent improved by multithreading.
+
+![Amdahl](/images/Amdahl_formula.png)
+
 
 ## 7. Planned Division of Responsibilities
 
