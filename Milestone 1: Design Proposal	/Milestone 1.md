@@ -92,7 +92,8 @@ The report prints `VALID: YES` or `VALID: NO`. Bad input prints `STATUS: INVALID
 
 ## 6. Initial Explanation of Relevant Operating-System Concepts
 
-- **Processes vs. threads.** 
+- **Processes vs. threads.**
+  Processes are indepedent programs in execution and have their own memory space. Threads belong to processes and share a process' resources. 
 
 - **Shared address space.** 
 
