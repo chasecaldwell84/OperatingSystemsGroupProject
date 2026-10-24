@@ -59,8 +59,11 @@ struct RunResult {
 - Elements will be calculated independently
 
 ### Workload 2: DOT (dot product)
-
-
+- The DOT workload calculates the dot product of two vectors of size n. Each element of the vectors will be generated deterministically using its index i and a provided seed. This ensures that all four processing models use the same input values and produce comparable results
+- Each element i is processed independently by multiplying A[i] * B[i]
+- The products are accumulated into partial sums, which are combined to produce final dot product
+- Workload will use a deterministic genration method so that the vectors do not need to be generated differently for each model
+- Each worker will calculate a local sum to avoid multiple threads modifying the same variable
 
 ### Workload 3: PI (Monte Carlo)
 
@@ -71,6 +74,12 @@ struct RunResult {
 
 ## 3. Proposed Thread and Rank Partitioning Strategies
 
+### Workload 2: DOT (dot product)
+- **Sequential:** One thread processes all `n` elements, multiplying corresponding vector elements and adding them to a running sum.
+- **std::thread:** The workload is divided into equal sections among the threads. Each thread calculates its own partial sum. After all threads finish and join, their partial sums are added together.
+- **OpenMP:** Uses `#pragma omp parallel for reduction(+:sum)` to divide the loop iterations among threads and combine their partial sums safely. Static scheduling is used since each iteration requires the same amount of work.
+- **MPI:** Each rank processes a separate portion of the vectors and calculates a local sum. `MPI_Reduce` with `MPI_SUM` combines all partial sums, and rank 0 receives the final result.
+- If `n` is not evenly divisible by the number of workers, the remaining elements are distributed so every element is processed exactly once.
 
 
 ## 4. Proposed Validation Strategy
